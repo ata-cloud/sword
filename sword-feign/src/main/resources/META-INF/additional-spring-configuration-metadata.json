@@ -1,0 +1,73 @@
+{
+  "properties": [
+    {
+      "name": "youyu.common.feign.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.youyu.common.config.TrimmedConfig",
+      "defaultValue": true,
+      "description": "启用 YouYu FeignClient 配置."
+    },
+    {
+      "name": "youyu.common.feign.interceptor.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.youyu.common.config.FeignClientConfiguration",
+      "defaultValue": true,
+      "description": "启用 FeignClient RequestInterceptor 自动设置请求头传递应用和用户登录信息."
+    },
+    {
+      "name": "youyu.common.feign.client.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.youyu.common.config.FeignClientConfiguration",
+      "defaultValue": true,
+      "description": "启用 YyFeignConfig 自动给应用注入url."
+    },
+    {
+      "name": "youyu.common.feign.mvc.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.youyu.common.config.FeignConfiguration.MvcConfig",
+      "defaultValue": true,
+      "description": "自定义 RequestMappingHandlerMapping.isHandler ."
+    },
+    {
+      "name": "youyu.common.feign.encoder.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.youyu.common.config.FeignConfiguration",
+      "defaultValue": true,
+      "description": "启用 SpringFormEncoderEnhancer 支持 FeignClient 文件上传 ."
+    },
+    {
+      "name": "youyu.common.feign.decoder.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.youyu.common.config.FeignConfiguration",
+      "defaultValue": true,
+      "description": "启用 ResponseEntityDecoder 解码器 ."
+    },
+    {
+      "name": "youyu.common.feign.error-decoder.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.youyu.common.config.FeignConfiguration",
+      "defaultValue": true,
+      "description": "配置 ErrorDecoder ."
+    },
+    {
+      "name": "youyu.common.feign.contract.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.youyu.common.config.FeignConfiguration",
+      "defaultValue": true,
+      "description": "启用feignContract,用于可继承的 feignClient."
+    },
+    {
+      "name": "youyu.common.feign.conversion.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.youyu.common.config.FeignConfiguration",
+      "defaultValue": true,
+      "description": "配置 FormattingConversionService."
+    },
+    {
+      "name": "middleground.access-token",
+      "type": "java.lang.String",
+      "sourceType": "com.youyu.common.FeignBasicAuthRequestInterceptor",
+      "description": "中台系统访问令牌."
+    }
+  ]
+}

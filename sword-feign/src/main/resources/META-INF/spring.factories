@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.youyu.common.config.FeignConfiguration,\
+com.youyu.common.config.FeignClientConfiguration,\
+com.youyu.common.hystrix.FeignHystrixConcurrencyStrategyAutoConfiguration

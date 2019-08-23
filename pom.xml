@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.yofish.platform</groupId>
+    <artifactId>sword-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0.RELEASE</version>
+    <modules>
+        <module>sword-api</module>
+        <module>sword-log</module>
+        <module>sword-utils</module>
+        <module>sword-feign</module>
+        <module>sword-handler</module>
+        <module>sword-dao</module>
+
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
+        <fastjson.version>1.2.47</fastjson.version>
+        <swagger.version>1.5.14</swagger.version>
+        <springfox-swagger2.version>2.8.0</springfox-swagger2.version>
+        <springfox-swagger-ui.version>2.8.0</springfox-swagger-ui.version>
+        <aspectjrt.version>1.8.10</aspectjrt.version>
+        <sword-api.version>1.0.0.RELEASE</sword-api.version>
+        <sword-cache.version>1.0.0.RELEASE</sword-cache.version>
+        <sword-handler.version>1.0.0.RELEASE</sword-handler.version>
+        <sword-dts.version>1.0.0.RELEASE</sword-dts.version>
+        <sword-log.version>1.0.0.RELEASE</sword-log.version>
+        <sword-mq.version>1.0.0.RELEASE</sword-mq.version>
+        <sword-utils.version>1.0.0.RELEASE</sword-utils.version>
+        <sword-config.version>1.0.0.RELEASE</sword-config.version>
+        <sword-dao.version>1.0.0.RELEASE</sword-dao.version>
+        <sword-feign.version>1.0.0.RELEASE</sword-feign.version>
+        <sword-generator.version>1.0.0.RELEASE</sword-generator.version>
+        <sword-cache-cachecloud.version>1.0.0.RELEASE</sword-cache-cachecloud.version>
+        <sword-monitor.version>1.0.0.RELEASE</sword-monitor.version>
+        <sword-workwechat.version>1.0.0.RELEASE</sword-workwechat.version>
+        <sword-swagger.version>1.0.0.RELEASE</sword-swagger.version>
+        <sword-cache-common.version>1.0.0.RELEASE</sword-cache-common.version>
+        <sword-cache-redisson.version>1.0.0.RELEASE</sword-cache-redisson.version>
+        <xxl-job.version>1.9.1-caiyi</xxl-job.version>
+        <jetty-server.version>9.2.24.v20180105</jetty-server.version>
+        <mybatis.version>3.4.69</mybatis.version>
+        <commons-compress.version>1.14</commons-compress.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
+        <commons-io.version>2.5</commons-io.version>
+        <commons-codec.version>1.10</commons-codec.version>
+        <commons-fileupload.version>1.3.1</commons-fileupload.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <commons-beanutils.version>1.9.3</commons-beanutils.version>
+        <redisson.version>3.5.3</redisson.version>
+        <persistence-api.version>1.0</persistence-api.version>
+        <ognl.version>3.0.6</ognl.version>
+        <apollo.client.version>1.0.0</apollo.client.version>
+        <mapper-spring-boot-starter.version>2.0.0</mapper-spring-boot-starter.version>
+        <druid.version>1.1.12</druid.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <okhttp.version>3.6.0</okhttp.version>
+        <commons-web.version>1.0.0</commons-web.version>
+        <logstash-logback-encoder.version>5.0</logstash-logback-encoder.version>
+        <mysql-connector-java.version>5.1.33</mysql-connector-java.version>
+        <feign-form.version>3.2.2</feign-form.version>
+        <feign-form-spring.version>3.2.2</feign-form-spring.version>
+        <mybatis-typehandlers-jsr310.version>1.0.2</mybatis-typehandlers-jsr310.version>
+        <springfox-swagger2.version>2.8.0</springfox-swagger2.version>
+        <fastjson.version>1.2.47</fastjson.version>
+        <docker-maven-plugin.version>0.4.13</docker-maven-plugin.version>
+        <apollo.version>1.1.0.20181115-SNAPSHOT</apollo.version>
+        <pagehelper-spring-boot-starter.version>1.2.7</pagehelper-spring-boot-starter.version>
+        <pagehelper.version>5.1.6</pagehelper.version>
+        <cachecloud-open.version>1.0</cachecloud-open.version>
+        <guava.version>20.0</guava.version>
+        <mapper-generator.version>1.0.5</mapper-generator.version>
+        <freemarker.version>2.3.23</freemarker.version>
+        <generator.version>1.3.7</generator.version>
+        <spring-boot-admin-starter-client.version>2.0.2</spring-boot-admin-starter-client.version>
+        <cat-client.version>1.4.1</cat-client.version>
+        <micrometer-registry-prometheus.version>1.0.5</micrometer-registry-prometheus.version>
+        <simpleclient_pushgateway.version>0.3.0</simpleclient_pushgateway.version>
+        <simpleclient_spring_boot.version>0.3.0</simpleclient_spring_boot.version>
+        <jetcache.version>2.5.9</jetcache.version>
+        <vault.version>2.0.1.RELEASE</vault.version>
+    </properties>
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <profileActive>local</profileActive>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profileActive>dev</profileActive>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <profileActive>test</profileActive>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <profileActive>prod</profileActive>
+                <!-- dubbo -->
+            </properties>
+        </profile>
+    </profiles>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!--spring cloud 版本依赖-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--    <dependency>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-feign</artifactId>
+                    <version>2.0.0.RC1</version>
+                </dependency>-->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-typehandlers-jsr310</artifactId>
+                <version>${mybatis-typehandlers-jsr310.version}</version>
+            </dependency>
+            <!--日志相关-->
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logstash-logback-encoder.version}</version>
+            </dependency>
+
+            <!--db 依赖定义-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+            <!--oracle drive-->
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc14</artifactId>
+                <version>10.2.0.4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yofish.platform</groupId>
+                <artifactId>sword-api</artifactId>
+                <version>${sword-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yofish.platform</groupId>
+                <artifactId>sword-handler</artifactId>
+                <version>${sword-handler.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yofish.platform</groupId>
+                <artifactId>sword-log</artifactId>
+                <version>${sword-log.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yofish.platform</groupId>
+                <artifactId>sword-dao</artifactId>
+                <version>${sword-dao.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yofish.platform</groupId>
+                <artifactId>sword-feign</artifactId>
+                <version>${sword-feign.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign.form</groupId>
+                <artifactId>feign-form</artifactId>
+                <version>${feign-form.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign.form</groupId>
+                <artifactId>feign-form-spring</artifactId>
+                <version>${feign-form-spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yofish.platform</groupId>
+                <artifactId>sword-utils</artifactId>
+                <version>${sword-utils.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectjrt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/io.swagger/swagger-annotations -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger-ui.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- jetty依赖, xxl-job 需要使用 -->
+
+
+            <!--Apache  -->
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons-beanutils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons-codec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>${commons-compress.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons-lang.version}</version>
+            </dependency>
+
+            <!-- redisson -->
+
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>persistence-api</artifactId>
+                <version>${persistence-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>1.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>ognl</groupId>
+                <artifactId>ognl</artifactId>
+                <version>${ognl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${mapper-spring-boot-starter.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.mybatis</groupId>
+                        <artifactId>mybatis</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+            <!--cachecloud-->
+
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-generator</artifactId>
+                <version>${mapper-generator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+                <!--<scope>provided</scope>-->
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>${generator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${spring-boot-admin-starter-client.version}</version>
+            </dependency>
+
+
+
+
+        </dependencies>
+    </dependencyManagement>
+
+
+
+
+    <build>
+        <plugins>
+            <!--Compiler-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <!-- Source -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Javadoc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam><!-- 添加这个压制JavaDoc检查 -->
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- GPG mvn clean deploy -P release -Dgpg.passphrase=YourPassphase -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo,manual</distribution>
+        </license>
+    </licenses>
+
+
+
+    <scm>
+        <connection>scm:git:https://github.com/ata-cloud/common.git</connection>
+        <developerConnection>scm:git:https://github.com/ata-cloud/common.git</developerConnection>
+        <url>https://github.com/ata-cloud/common.git</url>
+        <tag>1.2.0</tag>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <name>OSS Snapshots Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <name>OSS Staging Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+</project>

@@ -1,0 +1,2 @@
+org.springframework.boot.SpringApplicationRunListener=com.youyu.common.listener.YyApplicationRunListener
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.youyu.common.config.TrimmedConfig
