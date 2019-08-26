@@ -36,7 +36,7 @@
  -  maven pom:
     -  groupId：如 发布平台 com.youyu.ops=com.youyu(公司名称).ops(产品名称，没有产品名称可用部门名称替代)（GroupID 是项目组织唯一的标识符，实际对应JAVA的包的结构，是main目录里java的目录结构）
     -  artifacted 定义了当前maven项目在组中唯一的ID,比如，platform-ops = platform(产品名称，没有产品名称可用部门名称替代)-ops(发布平台系统)
-    -  version 开发中的项目用1.0.0-SNAPSHOT，开发完成并且上线用1.0.0.RELEASE，下一个开发版本根据变更情况升级为1.1.0-SNAPSHOT 或者 2.0.0.RELEASE  解释说明： SNAPSHOT是不稳定版，可能是还在开发中的版本，在开发时用户A可能每天都会更新代码，可能会频繁的发布版本。
+    -  version 开发中的项目用1.0.0-SNAPSHOT，开发完成并且上线用1.1.0.RELEASE，下一个开发版本根据变更情况升级为1.1.0-SNAPSHOT 或者 2.0.0.RELEASE  解释说明： SNAPSHOT是不稳定版，可能是还在开发中的版本，在开发时用户A可能每天都会更新代码，可能会频繁的发布版本。
     -  依赖管理 所有项目必须依赖 common-parent
  -  项目结构:  
         -  groupId
