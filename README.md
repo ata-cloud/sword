@@ -101,11 +101,9 @@
 
 ## 版本发布
 
-**3.6.0**
+**1.1.0**
 - common-dao        操作记录拦截器: 支持自定义insert、update方法，支持多参数和List类型参数
 
-
-**3.0.0**
 - commo-config      Apollo 配置动态更新
 - common-dao        ExampleEnhancer 增强通用 Mapper 的 Example#createCriteria,自动根据查询对象中的属性解析出 criteria 的 condition
 - common-dao        添加了拦截器，自动注入创建人修改人信息
@@ -116,15 +114,16 @@
 - common-swagger    自动配置swagger，方法上加 @ApiOperation 注解就可以
 - common-api        BizException 构造函数添加 desc 属性赋值
 
-
-**2.0.3**
 - common-feign 添加 MultipartFile 文件上传支持，支持多文件 MultipartFile[] 上传。
 - common-feign 添加 FeignMultipartFile 类，实现了 MultipartFile 方便 Feign Client 文件上传。
 
-
-**2.0.1**
 - common-dao 中 com.youyu.common.type.BaseCodeEnum 移到 common-api com.youyu.common.api.BaseCodeEnum
 - common-feign Feign请求拦截器（设置请求头，传递登录信息）
 - common-api 添加 @Trimmed 用于 reqeut param body(jackson) trim 方法去前后空格.
 - common-cache-cachecloud 添加 jetcache 缓存框架支持. 
 - common-dao 升级 druid 从 0.2.23 到 1.1.12
+
+
+**1.2.0**
+- common-dao        操作记录拦截器: 修复方法类型的正则判断缺陷
+- common-dao        操作记录拦截器: 添加`youyu.common.operationRecord.enabled`配置开关
