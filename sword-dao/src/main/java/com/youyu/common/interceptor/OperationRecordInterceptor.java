@@ -26,7 +26,7 @@ import java.util.regex.Pattern;
 /**
  * 操作记录拦截器
  * <p>
- * Selective 方法操作自动记录创建人、创建时间、修改人、修改时间
+ * insert|update 操作自动记录创建人、创建时间、修改人、修改时间
  *
  * @author WangSongJun
  * @date 2018-12-11

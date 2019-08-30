@@ -274,7 +274,6 @@ public class PageHelperAutoConfiguration {
         while (var3.hasNext()) {
             SqlSessionFactory sqlSessionFactory = (SqlSessionFactory) var3.next();
             sqlSessionFactory.getConfiguration().addInterceptor(interceptor);
-            sqlSessionFactory.getConfiguration().addInterceptor(new OperationRecordInterceptor());
         }
 
     }

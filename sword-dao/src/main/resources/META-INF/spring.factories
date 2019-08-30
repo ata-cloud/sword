@@ -1,3 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 com.youyu.common.config.DruidConfiguration,\
-com.youyu.common.config.PageHelperAutoConfiguration
+com.youyu.common.config.PageHelperAutoConfiguration,\
+com.youyu.common.config.OperationRecordAutoConfiguration
