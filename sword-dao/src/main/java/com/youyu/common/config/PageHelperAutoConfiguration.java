@@ -239,7 +239,7 @@ import java.util.Properties;
 @ConditionalOnBean({SqlSessionFactory.class})
 @EnableConfigurationProperties({PageHelperProperties.class})
 @AutoConfigureAfter({MybatisAutoConfiguration.class})
-@ConditionalOnProperty(name = CommonConfigConstant.COMMON_PREFIX + "pagehelper.enable", matchIfMissing = true)
+@ConditionalOnProperty(name = CommonConfigConstant.COMMON_PREFIX + "pagehelper.enabled", matchIfMissing = true)
 public class PageHelperAutoConfiguration {
     @Autowired
     private List<SqlSessionFactory> sqlSessionFactoryList;

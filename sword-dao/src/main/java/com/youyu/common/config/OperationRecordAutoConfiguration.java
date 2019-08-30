@@ -29,7 +29,7 @@ import java.util.List;
 @ConditionalOnBean({SqlSessionFactory.class})
 @EnableConfigurationProperties({PageHelperProperties.class})
 @AutoConfigureAfter({MybatisAutoConfiguration.class})
-@ConditionalOnProperty(name = CommonConfigConstant.COMMON_PREFIX + "operationRecord.enable", matchIfMissing = true)
+@ConditionalOnProperty(name = CommonConfigConstant.COMMON_PREFIX + "operationRecord.enabled", matchIfMissing = true)
 public class OperationRecordAutoConfiguration {
     @Autowired
     private List<SqlSessionFactory> sqlSessionFactoryList;
