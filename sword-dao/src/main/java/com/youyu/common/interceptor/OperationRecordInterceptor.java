@@ -144,12 +144,12 @@ public class OperationRecordInterceptor implements Interceptor {
 
     //类型匹配
 
-    private Pattern insertPattern = Pattern.compile("\\s*insert", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+    private Pattern insertPattern = Pattern.compile("^\\s*insert", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
 
     protected boolean isInsert(String sql) {
         return insertPattern.matcher(sql).find();
     }
-    private Pattern deletePattern = Pattern.compile("\\s*delete", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+    private Pattern deletePattern = Pattern.compile("^\\s*delete", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
 
     protected boolean isDelete(String sql) {
         return deletePattern.matcher(sql).find();
