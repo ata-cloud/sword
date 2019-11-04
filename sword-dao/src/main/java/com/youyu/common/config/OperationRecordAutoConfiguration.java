@@ -15,9 +15,7 @@
  */
 package com.youyu.common.config;
 
-import com.github.pagehelper.PageInterceptor;
 import com.youyu.common.constant.CommonConfigConstant;
-import com.youyu.common.dialect.YyPageHelper;
 import com.youyu.common.interceptor.OperationRecordInterceptor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -26,67 +24,39 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.util.StringUtils;
 
 import javax.annotation.PostConstruct;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Properties;
 
 /**
- * 替换
- * <dependency>
- * <groupId>com.github.pagehelper</groupId>
- * <artifactId>pagehelper-spring-boot-starter</artifactId>
- * </dependency>
- * 依赖,自己引入 pagehelper.
- * 如果依赖错误,请排除上面依赖.
+ * 启用操作记录拦截注入
+ *
+ * @see com.youyu.common.interceptor.OperationRecordInterceptor
+ *
+ * @author WangSongJun
+ * @date 2019-08-30
  */
 @Slf4j
 @Configuration
 @ConditionalOnBean({SqlSessionFactory.class})
 @EnableConfigurationProperties({PageHelperProperties.class})
 @AutoConfigureAfter({MybatisAutoConfiguration.class})
-@ConditionalOnProperty(name = CommonConfigConstant.COMMON_PREFIX + "pagehelper.enabled", matchIfMissing = true)
-public class PageHelperAutoConfiguration {
+@ConditionalOnProperty(name = CommonConfigConstant.COMMON_PREFIX + "operationRecord.enabled", matchIfMissing = true)
+public class OperationRecordAutoConfiguration {
     @Autowired
     private List<SqlSessionFactory> sqlSessionFactoryList;
-    @Autowired
-    private PageHelperProperties properties;
-
-    public PageHelperAutoConfiguration() {
-    }
-
-    @Bean
-    @ConfigurationProperties(
-            prefix = "pagehelper"
-    )
-    public Properties pageHelperProperties() {
-        return new Properties();
-    }
 
     @PostConstruct
     public void addPageInterceptor() {
-        log.info("启用YyPageHelper");
-        PageInterceptor interceptor = new PageInterceptor();
-        Properties properties = new Properties();
-        if (StringUtils.isEmpty(this.properties.getDialect())) {
-            //讲默认 Dialect 替换为内部的 YyPageHelper
-            this.properties.setDialect(YyPageHelper.class.getCanonicalName());
-        }
-        properties.putAll(this.pageHelperProperties());
-        properties.putAll(this.properties.getProperties());
-        interceptor.setProperties(properties);
+        log.info("启用操作记录拦截注入");
         Iterator var3 = this.sqlSessionFactoryList.iterator();
-
+        OperationRecordInterceptor operationRecordInterceptor = new OperationRecordInterceptor();
         while (var3.hasNext()) {
             SqlSessionFactory sqlSessionFactory = (SqlSessionFactory) var3.next();
-            sqlSessionFactory.getConfiguration().addInterceptor(interceptor);
+            sqlSessionFactory.getConfiguration().addInterceptor(operationRecordInterceptor);
         }
-
     }
 }

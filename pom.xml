@@ -7,7 +7,7 @@
     <groupId>com.yofish.platform</groupId>
     <artifactId>sword-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0.RELEASE</version>
+    <version>1.2.0.RELEASE</version>
     <modules>
         <module>sword-api</module>
         <module>sword-log</module>
@@ -35,23 +35,23 @@
         <springfox-swagger2.version>2.8.0</springfox-swagger2.version>
         <springfox-swagger-ui.version>2.8.0</springfox-swagger-ui.version>
         <aspectjrt.version>1.8.10</aspectjrt.version>
-        <sword-api.version>1.0.0.RELEASE</sword-api.version>
-        <sword-cache.version>1.0.0.RELEASE</sword-cache.version>
-        <sword-handler.version>1.0.0.RELEASE</sword-handler.version>
-        <sword-dts.version>1.0.0.RELEASE</sword-dts.version>
-        <sword-log.version>1.0.0.RELEASE</sword-log.version>
-        <sword-mq.version>1.0.0.RELEASE</sword-mq.version>
-        <sword-utils.version>1.0.0.RELEASE</sword-utils.version>
-        <sword-config.version>1.0.0.RELEASE</sword-config.version>
-        <sword-dao.version>1.0.0.RELEASE</sword-dao.version>
-        <sword-feign.version>1.0.0.RELEASE</sword-feign.version>
-        <sword-generator.version>1.0.0.RELEASE</sword-generator.version>
-        <sword-cache-cachecloud.version>1.0.0.RELEASE</sword-cache-cachecloud.version>
-        <sword-monitor.version>1.0.0.RELEASE</sword-monitor.version>
-        <sword-workwechat.version>1.0.0.RELEASE</sword-workwechat.version>
-        <sword-swagger.version>1.0.0.RELEASE</sword-swagger.version>
-        <sword-cache-common.version>1.0.0.RELEASE</sword-cache-common.version>
-        <sword-cache-redisson.version>1.0.0.RELEASE</sword-cache-redisson.version>
+        <sword-api.version>1.2.0.RELEASE</sword-api.version>
+        <sword-cache.version>1.2.0.RELEASE</sword-cache.version>
+        <sword-handler.version>1.2.0.RELEASE</sword-handler.version>
+        <sword-dts.version>1.2.0.RELEASE</sword-dts.version>
+        <sword-log.version>1.2.0.RELEASE</sword-log.version>
+        <sword-mq.version>1.2.0.RELEASE</sword-mq.version>
+        <sword-utils.version>1.2.0.RELEASE</sword-utils.version>
+        <sword-config.version>1.2.0.RELEASE</sword-config.version>
+        <sword-dao.version>1.2.0.RELEASE</sword-dao.version>
+        <sword-feign.version>1.2.0.RELEASE</sword-feign.version>
+        <sword-generator.version>1.2.0.RELEASE</sword-generator.version>
+        <sword-cache-cachecloud.version>1.2.0.RELEASE</sword-cache-cachecloud.version>
+        <sword-monitor.version>1.2.0.RELEASE</sword-monitor.version>
+        <sword-workwechat.version>1.2.0.RELEASE</sword-workwechat.version>
+        <sword-swagger.version>1.2.0.RELEASE</sword-swagger.version>
+        <sword-cache-common.version>1.2.0.RELEASE</sword-cache-common.version>
+        <sword-cache-redisson.version>1.2.0.RELEASE</sword-cache-redisson.version>
         <xxl-job.version>1.9.1-caiyi</xxl-job.version>
         <jetty-server.version>9.2.24.v20180105</jetty-server.version>
         <mybatis.version>3.4.69</mybatis.version>
@@ -366,6 +366,7 @@
 
 
     <build>
+        <pluginManagement>
         <plugins>
             <!--Compiler-->
             <plugin>
@@ -412,6 +413,26 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
+                <inherited>false</inherited>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <inherited>false</inherited>
                 <version>1.5</version>
                 <executions>
                     <execution>

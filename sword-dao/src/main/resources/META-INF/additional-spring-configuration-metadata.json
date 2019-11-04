@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "youyu.common.operationRecord.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.youyu.common.config.OperationRecordAutoConfiguration",
+      "defaultValue": true,
+      "description": "启用操作记录自动注入配置."
+    },
+    {
+      "name": "youyu.common.feign.pagehelper.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.youyu.common.config.PageHelperAutoConfiguration",
+      "defaultValue": true,
+      "description": "启用YyPageHelper 配置."
+    }
+  ]
+}
