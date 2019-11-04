@@ -15,6 +15,7 @@
         <module>sword-feign</module>
         <module>sword-handler</module>
         <module>sword-dao</module>
+        <module>sword-strategy</module>
 
     </modules>
 
