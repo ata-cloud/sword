@@ -254,9 +254,6 @@ public class YyApplicationRunListener implements SpringApplicationRunListener {
 
     @Override
     public void contextLoaded(ConfigurableApplicationContext context) {
-        YyAssert.isFalse(context.getEnvironment().getProperty("spring.application.name") == null, BUSINESS_ERROR.getCode(), "未设置应用名称spring.application.name");
-        this.applicationName = context.getEnvironment().getProperty("spring.application.name");
-        ApplicationInfo.applicationName = applicationName;
         log.info("应用" + applicationName + "系统上下文加载完成" + context);
 
     }
