@@ -5,10 +5,10 @@
     <parent>
         <groupId>com.yofish.platform</groupId>
         <artifactId>sword-parent</artifactId>
-        <version>1.3.0.RELEASE</version>
+        <version>1.4.1.RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <version>1.3.0.RELEASE</version>
+    <version>1.4.1.RELEASE</version>
 
     <artifactId>sword-strategy</artifactId>
 
