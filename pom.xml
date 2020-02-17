@@ -68,7 +68,6 @@
         <redisson.version>3.5.3</redisson.version>
         <persistence-api.version>1.0</persistence-api.version>
         <ognl.version>3.0.6</ognl.version>
-        <apollo.client.version>1.0.0</apollo.client.version>
         <mapper-spring-boot-starter.version>2.0.0</mapper-spring-boot-starter.version>
         <druid.version>1.1.12</druid.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -84,7 +83,6 @@
         <springfox-swagger2.version>2.8.0</springfox-swagger2.version>
         <fastjson.version>1.2.47</fastjson.version>
         <docker-maven-plugin.version>0.4.13</docker-maven-plugin.version>
-        <apollo.version>1.1.0.20181115-SNAPSHOT</apollo.version>
         <pagehelper-spring-boot-starter.version>1.2.7</pagehelper-spring-boot-starter.version>
         <pagehelper.version>5.1.6</pagehelper.version>
         <cachecloud-open.version>1.0</cachecloud-open.version>
@@ -99,6 +97,7 @@
         <simpleclient_spring_boot.version>0.3.0</simpleclient_spring_boot.version>
         <jetcache.version>2.5.9</jetcache.version>
         <vault.version>2.0.1.RELEASE</vault.version>
+        <apollo.client.version>2.0.0-SNAPSHOT</apollo.client.version>
     </properties>
     <profiles>
         <profile>
@@ -363,8 +362,11 @@
                 <artifactId>spring-boot-admin-starter-client</artifactId>
                 <version>${spring-boot-admin-starter-client.version}</version>
             </dependency>
-
-
+            <dependency>
+                <groupId>com.yofish.platform</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo.client.version}</version>
+            </dependency>
 
 
         </dependencies>
