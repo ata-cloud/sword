@@ -16,7 +16,7 @@
         <module>sword-handler</module>
         <module>sword-dao</module>
         <module>sword-strategy</module>
-
+        <module>sword-dts</module>
     </modules>
 
     <parent>
@@ -367,7 +367,11 @@
                 <artifactId>apollo-client</artifactId>
                 <version>${apollo.client.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
