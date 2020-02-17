@@ -46,6 +46,7 @@
         <sword-utils.version>2.0.0-SNAPSHOT</sword-utils.version>
         <sword-config.version>2.0.0-SNAPSHOT</sword-config.version>
         <sword-dao.version>2.0.0-SNAPSHOT</sword-dao.version>
+        <sword-dts.version>2.0.0-SNAPSHOT</sword-dts.version>
         <sword-feign.version>2.0.0-SNAPSHOT</sword-feign.version>
         <sword-generator.version>2.0.0-SNAPSHOT</sword-generator.version>
         <sword-cache-cachecloud.version>2.0.0-SNAPSHOT</sword-cache-cachecloud.version>
@@ -197,7 +198,11 @@
                 <artifactId>sword-dao</artifactId>
                 <version>${sword-dao.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.yofish.platform</groupId>
+                <artifactId>sword-dts</artifactId>
+                <version>${sword-dts.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.yofish.platform</groupId>
                 <artifactId>sword-feign</artifactId>
