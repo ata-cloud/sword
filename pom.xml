@@ -17,6 +17,7 @@
         <module>sword-dao</module>
         <module>sword-strategy</module>
         <module>sword-dts</module>
+        <module>sword-swagger</module>
     </modules>
 
     <parent>
