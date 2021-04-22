@@ -57,7 +57,7 @@
         <sword-strategy.version>1.4.1.RELEASE</sword-strategy.version>
         <xxl-job.version>1.9.1-caiyi</xxl-job.version>
         <jetty-server.version>9.2.24.v20180105</jetty-server.version>
-        <mybatis.version>3.4.6</mybatis.version>
+        <mybatis.version>3.5.6</mybatis.version>
         <commons-compress.version>1.14</commons-compress.version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <commons-io.version>2.5</commons-io.version>
